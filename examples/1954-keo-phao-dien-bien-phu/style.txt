@@ -1,0 +1,61 @@
+Flat 2D vector cartoon, the look of a simple Vietnamese history cartoon series for YouTube,
+drawn in Flash or Toon Boom. Television animation cels. NOT painted background art, NOT concept
+art, NOT illustration.
+
+LINE. THIN, clean, even vector outlines in dark warm brown. Smooth confident curves, no sketch
+lines, no varying thickness, no bold heavy ink. The outline is a thin contour, not a border.
+Outlines appear only on real shape boundaries, never as interior detail scribble.
+
+BRIGHTNESS. Mid key, the brightness of a clear ordinary day. Not dim and not washed out. Keep
+real mid tones in the greens and the earth; do not pastel everything. Dark areas are the outlines
+plus a few genuinely dark objects, around one tenth of the frame. No dark corners, no vignette,
+no deep shadow masses, no murky undergrowth, and equally no large empty expanse of pale sky.
+
+COLOUR. Soft natural tones at MODERATE saturation, closer to pastel than to poster paint. Muted
+sage and grass greens, pale ochre, soft brick red, warm light grey, light sky blue, pale blue
+distance. Never deep jewel colours, never heavy browns, never neon.
+
+FLATNESS. Very few distinct colours in the whole picture. Each object is one flat fill plus at
+most one slightly darker tone of the same hue. No gradients except a gentle one in the open sky.
+No cast shadows on the ground. No highlights, no rim light, no ambient occlusion, no texture, no
+grain, no hatching, no speckling, no painterly brushwork, no pebbles or clods drawn on the earth.
+Ground is a smooth flat band of colour.
+
+DETAIL, the single most important rule. The scene is FULL and specific: many objects and many
+people, the way a whole street or a whole village is full. Do NOT empty the scene out. What is
+simple is each individual object, not the scene. Draw every thing with the fewest possible
+shapes: a house is a roof shape, a wall shape and two window rectangles; a soldier is a head, a
+body and four limbs; the earth is one flat band. Complexity comes from the NUMBER of simple
+things, never from detail inside one thing. No texture, no rendering, no pebbles or clods on the
+ground, no individual leaves, no decorative debris.
+
+FIGURES. Head is noticeably large for the body, about one to five head-to-body. Face is
+completely flat: small solid black oval eyes with no white and no iris detail, two thin short
+eyebrow arcs, a very small nose line or none at all, one short mouth line. One flat skin tone and
+nothing else on the face, no cheek shading, no jawline modelling, no nose bridge. Hair is one
+flat black shape. Hands are simple mitten shapes. Not chibi, not caricature, not stick figures,
+not handsome manga faces.
+ETHNICITY follows each character's side, never one face for everyone: Vietnamese characters have
+Vietnamese features and black hair; French characters are white Europeans with pale pink skin,
+varied hair colours (brown, blond, ginger, grey), longer noses, many with beards or moustaches.
+Period-correct 1954 Viet Minh clothing: brown and faded-green cotton uniforms, pith helmets with
+a net and a couple of cut leaves, rubber sandals, cloth leg wraps, plain canvas shoulder bags.
+
+NATURE. A tree canopy is ONE scalloped bumpy silhouette filled with a mid green, plus two or
+three lighter green blobs inside it. Never draw individual leaves. Trees are few and separated,
+never a wall of jungle. Distant hills are two or three flat pale blue-green layered shapes with
+no detail. Mist is one flat soft white band.
+
+COMPOSITION. Wide establishing shot, 16:9, camera slightly ELEVATED looking down at a three
+quarter angle so the ground reads as a broad horizontal plane. The horizon sits HIGH: sky fills
+at most a third of the frame, the rest is ground, people and objects. Figures spread across the
+width like actors on a stage, a few larger ones near the lower edge, many smaller simplified ones
+behind them.
+
+LIGHT. Flat and even, no light source, no time-of-day drama. For night, shift the whole palette
+to a light blue-grey and keep everything clearly readable; never crush to black.
+
+Absolutely no text, letters, numbers, captions, subtitles, logos, watermarks, speech bubbles,
+signatures or UI anywhere in the image. No modern objects. No photorealism, no 3D render, no
+anime or manga background art, no Ghibli painted background, no American comic style, no Chinese
+or Japanese costume.

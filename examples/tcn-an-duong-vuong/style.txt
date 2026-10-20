@@ -1,0 +1,84 @@
+Flat 2D vector cartoon, the look of a simple Vietnamese history cartoon series for YouTube,
+drawn in Flash or Toon Boom. Television animation cels. NOT painted background art, NOT concept
+art, NOT illustration.
+
+LINE. THIN, clean, even vector outlines in dark warm brown. Smooth confident curves, no sketch
+lines, no varying thickness, no bold heavy ink. The outline is a thin contour, not a border.
+Outlines appear only on real shape boundaries, never as interior detail scribble.
+
+BRIGHTNESS. Mid key, the brightness of a clear ordinary day. Not dim and not washed out. Keep
+real mid tones in the greens and the earth; do not pastel everything. Dark areas are the outlines
+plus a few genuinely dark objects, around one tenth of the frame. No dark corners, no vignette,
+no deep shadow masses, no murky undergrowth, and equally no large empty expanse of pale sky.
+
+COLOUR. Soft natural tones at MODERATE saturation, closer to pastel than to poster paint. Muted
+sage and grass greens, pale ochre, soft brick red, warm light grey, light sky blue, pale blue
+distance. Never deep jewel colours, never heavy browns, never neon.
+
+FLATNESS. Very few distinct colours in the whole picture. Each object is one flat fill plus at
+most one slightly darker tone of the same hue. No gradients except a gentle one in the open sky.
+No cast shadows on the ground. No highlights, no rim light, no ambient occlusion, no texture, no
+grain, no hatching, no speckling, no painterly brushwork, no pebbles or clods drawn on the earth.
+Ground is a smooth flat band of colour.
+
+DETAIL, the single most important rule. The scene is FULL and specific: many objects and many
+people, the way a whole street or a whole village is full. Do NOT empty the scene out. What is
+simple is each individual object, not the scene. Draw every thing with the fewest possible
+shapes: a house is a roof shape, a wall shape and two window rectangles; a soldier is a head, a
+body and four limbs; the earth is one flat band. Complexity comes from the NUMBER of simple
+things, never from detail inside one thing. No texture, no rendering, no pebbles or clods on the
+ground, no individual leaves, no decorative debris.
+
+FIGURES. Head is noticeably large for the body, about one to five head-to-body. Face is
+completely flat: small solid black oval eyes with no white and no iris detail, two thin short
+eyebrow arcs, a very small nose line or none at all, one short mouth line. One flat skin tone and
+nothing else on the face, no cheek shading, no jawline modelling, no nose bridge. Hair is one
+flat black shape. Hands are simple mitten shapes. Not chibi, not caricature, not stick figures,
+not handsome manga faces.
+ETHNICITY follows each character's side, never one face for everyone: the Lạc Việt people are
+Vietnamese with black hair; Han Chinese soldiers and officials are drawn as Han Chinese.
+
+PERIOD: Northern Vietnam (kingdom of Âu Lạc), 3rd century BC, the Đông Sơn bronze-age culture.
+LẠC VIỆT PEOPLE: dark brown, ochre or black hand-woven cotton; women wear a wrap skirt and a short
+fitted top or a simple straight tunic, hair in a high bun or long hair tied back, often wrapped in a
+dark cloth turban; men wear a loincloth or short wrap skirt and a sleeveless tunic, hair in a bun.
+Bare feet. Bronze jewellery: wide bronze bangles, ear rings. Weapons are Đông Sơn bronze: leaf-shaped
+spear heads, boot-shaped bronze axes, short daggers with a figure on the hilt, crossbows, round
+woven shields. Big bronze kettle drums (trống đồng) with a star at the centre of the top face.
+RECURRING CHARACTERS, draw them the same every time they appear:
+- AN DƯƠNG VƯƠNG: a Vietnamese king about fifty, short black beard, hair in a bun under a tall bronze
+  crown-like headband with a feather, deep brown robe with a bronze breastplate patterned like the star on a
+  Đông Sơn drum, bronze bangles.
+- MỴ CHÂU: his daughter, a Vietnamese princess about eighteen, long black hair tied low with a red cord,
+  ivory-white wrap tunic over a dark red wrap skirt, bronze earrings, gentle face.
+- TRỌNG THỦY: a young Han Chinese prince about twenty, hair in a topknot with a small black cap, long
+  dark blue robe with wide sleeves and a red sash, clean-shaven.
+- TRIỆU ĐÀ: king of Nam Việt, an older Han Chinese man with a long grey beard, black robe and a black
+  ceremonial crown, lamellar armour when at war.
+- KIM QUY: an enormous golden turtle rising from the water, calm wise eyes, flat golden shell pattern.
+NAM VIỆT SIDE (Han Chinese of the Qin-Han era): soldiers in lamellar armour over red or black tunics, black lacquered caps or
+iron helmets, long ji halberds, swords, crossbows; officials in long black or dark red robes with
+wide sleeves and a black official's cap. Han banners are plain red or black cloth with NO writing.
+ABSOLUTELY NOT: Japanese samurai or kimono, Korean hanbok, Tang/Ming/Qing Chinese costume on the
+Vietnamese, pointed straw conical hats on the king or the princess, Thai or Indian costume, any metal plate
+armour of medieval Europe.
+
+NATURE: the Red River delta and its edge: green rice fields, a wide red-brown river, low green hills
+and a few limestone peaks on the horizon, bamboo clumps, banana trees, stilt houses with curved
+boat-shaped thatched roofs (the roof ridge sweeps up at both ends like on Đông Sơn drums). A tree
+canopy is ONE scalloped bumpy silhouette in mid green plus two or three lighter blobs; never draw
+individual leaves. Han cities are rammed-earth walls with wooden gate towers and tiled roofs.
+
+COMPOSITION. Wide establishing shot, 16:9, camera slightly ELEVATED looking down at a three
+quarter angle so the ground reads as a broad horizontal plane. The horizon sits HIGH: sky fills
+at most a third of the frame, the rest is ground, people and objects. Figures spread across the
+width like actors on a stage, a few larger ones near the lower edge, many smaller simplified ones
+behind them.
+
+LIGHT. Flat and even, no light source, no time-of-day drama. For night, shift the whole palette
+to a light blue-grey and keep everything clearly readable; never crush to black.
+
+Absolutely no text, letters, numbers, captions, subtitles, logos, watermarks, speech bubbles,
+signatures or UI anywhere in the image. No modern objects. No photorealism, no 3D render, no
+anime or manga background art, no Ghibli painted background, no American comic style, no Chinese
+or Japanese costume on any Vietnamese character.

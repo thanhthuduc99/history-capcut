@@ -1,0 +1,65 @@
+{
+  "numbers": [
+    [
+      "năm chín trăm ba mươi tám",
+      "năm 938"
+    ],
+    [
+      "năm chín trăm ba mươi bảy",
+      "năm 937"
+    ],
+    [
+      "năm chín trăm ba mươi chín",
+      "năm 939"
+    ],
+    [
+      "một nghìn năm",
+      "1.000 năm"
+    ]
+  ],
+  "cues": [
+    [
+      "giết hại",
+      "impact-bass-1.mp3",
+      0.0,
+      "sfx"
+    ],
+    [
+      "đầu nhọn bịt sắt",
+      "impact-bass-2.mp3",
+      0.0,
+      "hit"
+    ],
+    [
+      "giả vờ thua chạy",
+      "whoosh-cinematic.mp3",
+      0.0,
+      "sfx"
+    ],
+    [
+      "thủy triều rút",
+      "riser.mp3",
+      -2.0,
+      "riser"
+    ],
+    [
+      "thủy triều rút",
+      "impact-bass-2.mp3",
+      0.3,
+      "hit"
+    ],
+    [
+      "lật úp",
+      "impact-bass-1.mp3",
+      0.0,
+      "sfx"
+    ],
+    [
+      "xưng vương",
+      "impact-bass-2.mp3",
+      0.0,
+      "hit"
+    ]
+  ],
+  "glue": "bạch đằng|thủy chiến|bắc thuộc|tiết độ|độ sứ|dương đình|đình nghệ|nha tướng|kiều công|công tiễn|giết hại|ngô quyền|con rể|trị tội|phản chủ|sợ hãi|cầu cứu|nam hán|mùa thu|mùa xuân|lưu cung|con trai|lưu hoằng|hoằng tháo|thủy quân|sử cũ|cây cọc|đầu nhọn|bịt sắt|lòng sông|cửa biển|nước triều|bãi cọc|chìm khuất|mặt nước|thuyền nhẹ|khiêu chiến|giả vờ|thua chạy|đuổi theo|tiến sâu|thủy triều|triều rút|hàng cọc|cọc nhọn|nhô lên|phần lớn|thuyền giặc|mắc cọc|lật úp|tử trận|dòng sông|thu nhặt|rút về|ý định|xâm lược|xưng vương|đóng đô|cổ loa|khép lại|cọc gỗ|trước đó|bắt đầu|năm trước"
+}

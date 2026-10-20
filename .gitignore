@@ -1,0 +1,10 @@
+.env
+*.env
+__pycache__/
+*.pyc
+*.mp4
+*.mov
+*.wav
+*.mp3
+build/
+export/

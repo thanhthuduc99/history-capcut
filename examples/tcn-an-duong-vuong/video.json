@@ -1,0 +1,71 @@
+{
+  "numbers": [
+    [
+      "một trăm bảy mươi chín trước công nguyên",
+      "179 TCN"
+    ],
+    [
+      "hai nghìn năm",
+      "2.000 năm"
+    ],
+    [
+      "ba vòng thành",
+      "3 vòng thành"
+    ],
+    [
+      "tám cây số",
+      "8 cây số"
+    ]
+  ],
+  "cues": [
+    [
+      "lại lở đến đó",
+      "impact-bass-1.mp3",
+      0.0,
+      "hit"
+    ],
+    [
+      "thần kim quy",
+      "sparkle.mp3",
+      0.0,
+      "sfx"
+    ],
+    [
+      "hàng vạn chiếc",
+      "impact-bass-2.mp3",
+      0.0,
+      "hit"
+    ],
+    [
+      "thua lớn",
+      "impact-bass-1.mp3",
+      0.0,
+      "sfx"
+    ],
+    [
+      "lén tráo",
+      "whoosh-cinematic.mp3",
+      0.0,
+      "sfx"
+    ],
+    [
+      "không còn linh nghiệm",
+      "riser.mp3",
+      -2.0,
+      "riser"
+    ],
+    [
+      "không còn linh nghiệm",
+      "impact-bass-2.mp3",
+      0.0,
+      "hit"
+    ],
+    [
+      "nước âu lạc mất",
+      "impact-bass-1.mp3",
+      0.0,
+      "sfx"
+    ]
+  ],
+  "glue": "đông anh|hà nội|cổ loa|âu lạc|thục phán|an dương|dương vương|gạch nung|tòa thành|vòng thành|chu vi|kim quy|lẫy nỏ|nỏ thần|khảo cổ|mũi tên|tên đồng|hàng vạn|triệu đà|nam việt|thua lớn|xin hòa|trọng thủy|cầu hôn|công chúa|mỵ châu|lông ngỗng|làm dấu|linh nghiệm|công nguyên|sử ký|tư mã|mã thiên|đan vào|thành đất|ba vòng|truyền thuyết|bằng chứng|dấu tích|con trai|lịch sử|dọc đường|hoàn toàn|thần kim|có gạch|có bằng|có chép|hứa sẽ|không hề|mê linh|trưng trắc|trưng nhị|lạc tướng|giao chỉ|cai trị|nhà hán|thái thú|tô định|hát môn|lễ thề|phất cờ|khởi nghĩa|thành trì|xưng vương|đóng đô|mất đất|mã viện|đem quân|giao chiến|lãng bạc|thua trận|cấm khê|truyền thuyết|người việt|gieo mình|sông hát|chép khác|làm vua|phụ nữ|đường phố|trường học|việt nam|chị em|em gái|hai bà|bộ máy|ách cai|bỏ thành|hai người|người phụ|chậm rãi|gia đình|xuất thân|chỉ huy|ghe ấy|cầm giáo|mẹ ông|ép ông|ra pháp|văng lên"
+}
