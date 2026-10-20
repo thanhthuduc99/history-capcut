@@ -1,6 +1,6 @@
 # history-capcut
 
-Skill cho Claude Code: đưa 1 dòng ý tưởng lịch sử, nhận về một project CapCut desktop đã dựng sẵn timeline. Claude tra nguồn, viết kịch bản, làm voice, gen mỗi câu thoại một ảnh hoạt hình 2D, rồi ghi thẳng file draft của CapCut. Bạn mở CapCut là thấy ảnh có zoom, phụ đề, voice, nhạc, SFX nằm đúng chỗ, không kéo thả gì.
+Skill cho Claude Code: đưa 1 dòng ý tưởng lịch sử, nhận về một project CapCut desktop đã dựng sẵn timeline. Claude tra nguồn, viết kịch bản, làm voice, gen mỗi câu thoại một ảnh hoạt hình 2D, rồi ghi thẳng file draft của CapCut. Bạn chỉ tạo project, kéo 1 folder tư liệu vào, gửi tên project; Claude vào dựng timeline: ảnh có zoom, phụ đề, voice, nhạc, SFX nằm đúng chỗ.
 
 ![5 khung hình từ 5 video làm bằng skill: kéo pháo Điện Biên Phủ, tàu Espérance nổ ở vàm Nhựt Tảo, Hai Bà Trưng thề ở Hát Môn, thần Kim Quy trao móng cho An Dương Vương, thuyền Nam Hán mắc cọc ở Bạch Đằng](docs/media/showcase.jpg)
 
@@ -34,7 +34,7 @@ Các video đã làm, kèm kịch bản, nguồn, mô tả cảnh: [`examples/`]
 2. **Kịch bản.** Mỗi dòng một câu, mỗi câu một cảnh.
 3. **Voice.** vivibe (API `api.lucylab.io`) đọc tiếng Việt, faster-whisper lấy mốc thời gian từng chữ.
 4. **Ảnh.** Codex CLI gọi tool `image_gen` của gói ChatGPT đang đăng nhập, không cần API key ảnh. Style khoá bằng một file luật hình theo thời kỳ cộng ảnh mốc.
-5. **CapCut.** Ghi thẳng `draft_content.json`, media pool, danh sách project.
+5. **CapCut.** Bạn tạo project và kéo folder `export/<slug>-capcut/` vào, tắt CapCut, gửi tên. Claude ghi timeline vào `draft_content.json` của project đó.
 
 
 ## Cài đặt
@@ -59,7 +59,8 @@ Rồi nói với Claude Code: *"làm video lịch sử về trận Chi Lăng"*. 
 ## Giới hạn
 
 - Định dạng draft CapCut không công khai, skill này viết theo bản desktop v189 (2026). CapCut đổi định dạng thì phải cập nhật `template/script/capcut_template.json`.
-- CapCut phải tắt hẳn lúc ghi project, không thì khi đóng nó ghi đè mất.
+- CapCut phải tắt hẳn lúc Claude ghi timeline, không thì khi đóng nó ghi đè mất.
+- Project do script tự tạo từ đầu thì CapCut 9.x không mở được, nên bước tạo project và kéo folder vào vẫn do bạn làm.
 - Model ảnh vẫn có lúc vẽ sai trang phục, sai thời, hay vẽ thêm chi tiết lạ (hay gặp nhất: đồ Nhật lọt vào cảnh Việt). Xem lại ảnh trước khi đăng; ảnh nào lỗi thì sửa mô tả trong `scenes.json` hoặc luật trong `style.txt` rồi chạy lại `gen_img.py <key>`.
 - Lời đọc chỉ đúng tới mức nguồn đúng. `sources.md` của từng video ghi rõ nguồn để bạn kiểm.
 

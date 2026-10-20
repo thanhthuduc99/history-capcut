@@ -1,7 +1,7 @@
 """Build the CapCut timeline of a draft: zoomed/punched shots, short captions, voice, music, SFX.
 
-  python script/edit_user_draft.py <draft-folder> --export     # use the files in export/ (normal case)
-  python script/edit_user_draft.py <draft-folder> --dry-run    # write to build/dryrun/ only
+  python script/edit_user_draft.py "<project name>" --export   # name as shown in CapCut (normal case)
+  python script/edit_user_draft.py "<project name>" --dry-run  # write to build/dryrun/ only
 
 Works on an empty draft (from create_project.py, or one the user made and dragged export/ into) or
 on a draft that already has the photos on a track. Per-video settings live in script/video.json.
@@ -243,6 +243,24 @@ def motion(move, dur, hit=None):
 
 
 # ---------------------------------------------------------------- main
+def resolve_draft(name):
+    """Project name as shown in CapCut (or its folder name) -> draft folder. Newest wins on duplicates."""
+    hits = []
+    for d in CAPCUT.iterdir():
+        m = d / "draft_meta_info.json"
+        if not m.is_file():
+            continue
+        try:
+            meta = json.loads(m.read_text(encoding="utf-8"))
+        except ValueError:
+            continue
+        if meta.get("draft_name", "").strip().lower() == name.strip().lower() or d.name == name:
+            hits.append((meta.get("tm_draft_create", 0), d))
+    if not hits:
+        sys.exit(f"no CapCut project named '{name}' in {CAPCUT}")
+    return max(hits)[1]
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("folder")
@@ -252,7 +270,8 @@ def main():
     global ASSETS
     ASSETS = ROOT / "export"
 
-    src = CAPCUT / a.folder
+    src = resolve_draft(a.folder)
+    print(f"  project '{a.folder}' -> folder {src.name}")
     if not a.dry_run and (src / ".locked").exists():
         sys.exit("CapCut still has this project open (.locked present). Close CapCut first.")
 
@@ -483,7 +502,7 @@ def main():
         rp = CAPCUT / "root_meta_info.json"
         root = json.loads(rp.read_text(encoding="utf-8"))
         for e in root["all_draft_store"]:
-            if e.get("draft_fold_path", "").rstrip("/").endswith("/" + a.folder):
+            if e.get("draft_fold_path", "").rstrip("/").endswith("/" + src.name):
                 e["tm_duration"] = total
         rp.write_text(json.dumps(root, ensure_ascii=False), encoding="utf-8")
 

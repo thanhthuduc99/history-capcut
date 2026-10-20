@@ -1,6 +1,6 @@
 ---
 name: history-capcut
-description: Làm video lịch sử dạng hoạt hình 2D từ 1 dòng ý tưởng, rồi tự dựng sẵn project trong CapCut desktop (không cần kéo thả). Claude tra và kiểm nguồn, viết kịch bản, làm voice bằng vivibe, gen mỗi câu thoại 1 ảnh bằng Codex image_gen, rồi ghi thẳng draft CapCut gồm ảnh có zoom/punch-in, phụ đề ngắn, voice, nhạc, SFX. Dùng khi user nói "làm video lịch sử", "video hoạt hình lịch sử", "làm clip về <nhân vật / trận đánh>", "bỏ vô capcut", "edit trong capcut", "history capcut".
+description: Làm video lịch sử dạng hoạt hình 2D từ 1 dòng ý tưởng, rồi dựng sẵn timeline trong project CapCut của user. Claude tra và kiểm nguồn, viết kịch bản, làm voice bằng vivibe, gen mỗi câu thoại 1 ảnh bằng Codex image_gen, user dán folder tư liệu vào project CapCut, Claude vào dựng timeline gồm ảnh có zoom/punch-in, phụ đề ngắn, voice, nhạc, SFX. Dùng khi user nói "làm video lịch sử", "video hoạt hình lịch sử", "làm clip về <nhân vật / trận đánh>", "bỏ vô capcut", "edit trong capcut", "history capcut".
 ---
 
 # History → CapCut
@@ -83,19 +83,26 @@ Lệnh gen dùng model nhẹ (`gpt-5.6-luna`, reasoning `low`, tắt plugin/skil
 
 Xem trước phụ đề: `python -c "import sys,json;sys.path.insert(0,'script');import edit_user_draft as E;[print(' '.join(w for w,_ in c['parts'])) for c in E.chunk(E.merge_numbers(json.load(open('build/words.json',encoding='utf-8'))))]"`
 
-## 8. Xuất và dựng CapCut
+## 8. Giao folder, user dán vào CapCut, Claude dựng timeline
 
 ```bash
-python script/export_assets.py                    # export/<slug>-capcut/ + <slug>-phu-de.srt + timeline
-python script/create_project.py <tên-project>     # project mới, media pool có sẵn thư mục Anh/Voice/Nhac/SFX
-python script/edit_user_draft.py <tên-project> --export
+python script/export_assets.py      # export/<slug>-capcut/  +  <slug>-phu-de.srt  +  <slug>-timeline.txt
 ```
 
-`create_project.py` ưu tiên chép một project trống có sẵn trên máy (CapCut tự tạo khi bấm Create project rồi thoát ra) làm khung; không có mới dùng khuôn đóng gói sẵn. Nên mở CapCut tạo 1 project trống trước lần chạy đầu.
+Báo user đường dẫn `export/<slug>-capcut/`. User tự làm 3 việc:
+1. Mở CapCut, bấm **Create project**, đặt tên.
+2. Kéo cả thư mục `<slug>-capcut` vào ô Media (không kéo xuống timeline).
+3. **Tắt hẳn CapCut**, gửi tên project cho Claude.
 
-**CapCut phải tắt hẳn** lúc chạy 2 lệnh cuối, không thì khi đóng nó ghi đè mất. Có file `.locked` trong thư mục draft nghĩa là đang mở, đừng tắt ngang, báo user đóng. Mỗi lần ghi đều sao lưu draft vào `build/backup/`.
+Rồi Claude chạy:
 
-Nếu user tự tạo project và kéo thư mục `export/<slug>-capcut/` vào, chỉ cần chạy lệnh cuối với tên folder draft của project đó. File `.srt` nằm ngoài vì CapCut không nhận srt làm media (nhập bằng Text > Import captions nếu cần).
+```bash
+python script/edit_user_draft.py "<tên project>" --export
+```
+
+Script tự tìm folder draft theo tên hiển thị, sao lưu vào `build/backup/`, dựng toàn bộ timeline. Xong báo user mở lại CapCut.
+
+Không tự tạo project bằng `create_project.py`: CapCut 9.x không mở được project do script tạo từ đầu, còn project user tạo rồi Claude dựng timeline thì mở được. File `.srt` để ngoài vì CapCut không nhận srt làm media (phụ đề đã nằm sẵn trên timeline). Có file `.locked` trong folder draft nghĩa là CapCut còn mở project đó: dừng, nhắn user đóng.
 
 ## Timeline dựng ra
 
