@@ -33,6 +33,22 @@ def audio_us(p):
     return int(float(r.stdout.strip()) * 1_000_000)
 
 
+def empty_local_draft():
+    """An existing CapCut draft with an empty timeline and no lock, newest first (None if none)."""
+    found = []
+    for d in CAPCUT.iterdir():
+        c = d / "draft_content.json"
+        if not c.is_file() or (d / ".locked").exists() or not (d / "Timelines/project.json").is_file():
+            continue
+        try:
+            doc = json.loads(c.read_text(encoding="utf-8"))
+        except ValueError:
+            continue
+        if not doc.get("tracks") and not any(v for k, v in doc.get("materials", {}).items() if isinstance(v, list)):
+            found.append((c.stat().st_mtime, d))
+    return max(found)[1] if found else None
+
+
 def main():
     name = sys.argv[1]
     dst = CAPCUT / name
@@ -44,10 +60,16 @@ def main():
             ["tasklist"], capture_output=True, text=True).stdout.lower():
         sys.exit("close CapCut first")
 
-    for rel_path, text in TEMPLATE["files"].items():        # an empty draft, written from the template
-        f = dst / rel_path
-        f.parent.mkdir(parents=True, exist_ok=True)
-        f.write_text(text, encoding="utf-8")
+    skel = empty_local_draft()
+    if skel:                                    # best: clone an empty draft this CapCut made itself
+        shutil.copytree(skel, dst, ignore=shutil.ignore_patterns(".locked", "draft_cover.jpg", "*.bak"))
+        print(f"  skeleton: local empty draft '{skel.name}'")
+    else:                                       # fresh machine: write the bundled template
+        for rel_path, text in TEMPLATE["files"].items():
+            f = dst / rel_path
+            f.parent.mkdir(parents=True, exist_ok=True)
+            f.write_text(text, encoding="utf-8")
+        print("  skeleton: bundled template")
 
     now_s, now_us = int(time.time()), int(time.time() * 1_000_000)
     pool, folders, rel = [], [], []
@@ -99,6 +121,7 @@ def main():
     root = json.loads(rp.read_text(encoding="utf-8")) if rp.is_file() else {
         "all_draft_store": [], "draft_ids": [], "root_path": CAPCUT.as_posix()}
     store = root.setdefault("all_draft_store", [])
+    store[:] = [x for x in store if x.get("draft_name") != name]
     e = deepcopy(TEMPLATE["root_entry"])
     e.update(draft_id=draft_id, draft_name=name, draft_fold_path=str(dst).replace("\\", "/"),
              draft_json_file=str(dst / "draft_content.json").replace("\\", "/"),

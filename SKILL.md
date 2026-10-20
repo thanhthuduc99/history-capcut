@@ -91,6 +91,8 @@ python script/create_project.py <tên-project>     # project mới, media pool c
 python script/edit_user_draft.py <tên-project> --export
 ```
 
+`create_project.py` ưu tiên chép một project trống có sẵn trên máy (CapCut tự tạo khi bấm Create project rồi thoát ra) làm khung; không có mới dùng khuôn đóng gói sẵn. Nên mở CapCut tạo 1 project trống trước lần chạy đầu.
+
 **CapCut phải tắt hẳn** lúc chạy 2 lệnh cuối, không thì khi đóng nó ghi đè mất. Có file `.locked` trong thư mục draft nghĩa là đang mở, đừng tắt ngang, báo user đóng. Mỗi lần ghi đều sao lưu draft vào `build/backup/`.
 
 Nếu user tự tạo project và kéo thư mục `export/<slug>-capcut/` vào, chỉ cần chạy lệnh cuối với tên folder draft của project đó. File `.srt` nằm ngoài vì CapCut không nhận srt làm media (nhập bằng Text > Import captions nếu cần).
