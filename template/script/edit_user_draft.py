@@ -461,7 +461,20 @@ def main():
         shutil.copytree(src, bak)
         print(f"backup -> {bak}")
         dst = src
-    (dst / "draft_content.json").write_text(json.dumps(doc, ensure_ascii=False), encoding="utf-8")
+    body = json.dumps(doc, ensure_ascii=False)
+    # CapCut 9.x opens Timelines/<main_timeline_id>/draft_content.json, not the root copy; an empty
+    # timeline left there wins and gets copied over the root. Write every copy.
+    targets = [dst / "draft_content.json"]
+    if not a.dry_run:
+        proj = dst / "Timelines/project.json"
+        if proj.is_file():
+            tid = json.loads(proj.read_text(encoding="utf-8")).get("main_timeline_id")
+            if tid:
+                targets.append(dst / "Timelines" / tid / "draft_content.json")
+        targets += [t.with_name("draft_content.json.bak") for t in list(targets)]
+    for t in targets:
+        t.parent.mkdir(parents=True, exist_ok=True)
+        t.write_text(body, encoding="utf-8")
     if not a.dry_run:
         meta_p = dst / "draft_meta_info.json"
         meta = json.loads(meta_p.read_text(encoding="utf-8"))
